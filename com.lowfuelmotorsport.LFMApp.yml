@@ -35,15 +35,13 @@ modules:
       - install -Dm755 lfm-app.sh /app/bin/lfm-app
       - install -Dm644 lfm-app/resources/linux/com.lowfuelmotorsport.LFMApp.desktop -t /app/share/applications
       - install -Dm644 lfm-app/resources/linux/com.lowfuelmotorsport.LFMApp.metainfo.xml -t /app/share/metainfo
-      - |
-        for size in 16 24 32 48 64 96 128 256 512; do
-          install -Dm644 lfm-app/resources/assets/icons/${size}x${size}.png \
-            /app/share/icons/hicolor/${size}x${size}/apps/com.lowfuelmotorsport.LFMApp.png
-        done
+      - install -Dm644 com.lowfuelmotorsport.LFMApp.png -t /app/share/icons/hicolor/512x512/apps
     sources:
       - type: archive
-        url: https://downloads.livery.lowfuelmotorsport.com/lfm-hub-updates/lfm-app-1.2.1-linux-x64.tar.gz
-        sha256: 84a46ff5c3f59455e4743a14f7119119487e485063d84c7f758412de9993493a
+        url: https://downloads.livery.lowfuelmotorsport.com/lfm-hub-updates/lfm-app-1.2.2-linux-x64.tar.gz
+        sha256: b2b0736f089d070f0cceaddf89142bd985d0f64e30e32fd3e9c06eb2422ed2cc
         dest: lfm-app
       - type: file
         path: lfm-app.sh
+      - type: file
+        path: com.lowfuelmotorsport.LFMApp.png
