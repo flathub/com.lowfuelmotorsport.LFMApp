@@ -1,6 +1,3 @@
-# LFM App (Low Fuel Motorsport). Upstream: PitPath UG (haftungsbeschränkt), https://lowfuelmotorsport.com
-# Repackages the official Linux release tarball (Electron app).
-
 app-id: com.lowfuelmotorsport.LFMApp
 runtime: org.freedesktop.Platform
 runtime-version: '26.08'
@@ -18,7 +15,7 @@ finish-args:
   - --device=dri
   # Notifications and tray icon
   - --talk-name=org.kde.StatusNotifierWatcher
-  # Steam libraries and Proton prefixes (ACC / AC documents live in compatdata/<appid>/pfx)
+  # Steam libraries and Proton prefixes (ACC and AC documents live in compatdata/<appid>/pfx)
   - --filesystem=~/.steam
   - --filesystem=~/.local/share/Steam
   - --filesystem=~/.var/app/com.valvesoftware.Steam
@@ -38,8 +35,8 @@ modules:
       - install -Dm644 com.lowfuelmotorsport.LFMApp.png -t /app/share/icons/hicolor/512x512/apps
     sources:
       - type: archive
-        url: https://downloads.livery.lowfuelmotorsport.com/lfm-hub-updates/lfm-app-1.2.2-linux-x64.tar.gz
-        sha256: b2b0736f089d070f0cceaddf89142bd985d0f64e30e32fd3e9c06eb2422ed2cc
+        url: https://downloads.livery.lowfuelmotorsport.com/lfm-hub-updates/lfm-app-1.2.3-linux-x64.tar.gz
+        sha256: b07168924c5fe414a025bb89bfbffdbf30b1ea431f6870e0ac844df4e9fc4df4
         dest: lfm-app
       - type: file
         path: lfm-app.sh
