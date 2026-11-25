@@ -35,8 +35,8 @@ modules:
       - install -Dm644 com.lowfuelmotorsport.LFMApp.png -t /app/share/icons/hicolor/512x512/apps
     sources:
       - type: archive
-        url: https://downloads.livery.lowfuelmotorsport.com/lfm-hub-updates/lfm-app-1.2.3-linux-x64.tar.gz
-        sha256: b07168924c5fe414a025bb89bfbffdbf30b1ea431f6870e0ac844df4e9fc4df4
+        url: https://downloads.livery.lowfuelmotorsport.com/lfm-hub-updates/lfm-app-1.2.4-linux-x64.tar.gz
+        sha256: 3cd980701b32dec65101e77b20c638bacda494655c99d978a26452c069bd1eca
         dest: lfm-app
       - type: file
         path: lfm-app.sh
